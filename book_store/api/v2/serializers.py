@@ -1,4 +1,5 @@
 from django.contrib.auth import get_user_model
+from django.db.models import Prefetch
 from rest_framework.serializers import ModelSerializer
 
 from book_store.models import Book, Author, PublishingHouse, Tags
@@ -40,3 +41,9 @@ class BookSerializer(ModelSerializer):
     class Meta:
         model = Book
         fields = "__all__"
+
+    @classmethod
+    def setup_eager_loading(cls, queryset):
+        author_prefetch = Prefetch("author", queryset=Author.objects.select_related("user"))
+        queryset = queryset.select_related("publishing_house").prefetch_related("tags", author_prefetch)
+        return queryset

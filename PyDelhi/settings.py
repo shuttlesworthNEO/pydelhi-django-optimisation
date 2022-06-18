@@ -133,3 +133,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 SILKY_PYTHON_PROFILER = True
 SILKY_PYTHON_PROFILER_BINARY = True
 SILKY_PYTHON_PROFILER_RESULT_PATH = "profiles"
+SILKY_DYNAMIC_PROFILING = [
+    {"module": "book_store.api.views", "function": "BookViewSet.list"},
+    {"module": "book_store.api.v2.views", "function": "BookViewSet.list"},
+]
+
+
+# REST FRAMEWORK
+# REST_FRAMEWORK = {"DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination", "PAGE_SIZE": 20}
