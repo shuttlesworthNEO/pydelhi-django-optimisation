@@ -141,3 +141,8 @@ SILKY_DYNAMIC_PROFILING = [
 
 # REST FRAMEWORK
 # REST_FRAMEWORK = {"DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination", "PAGE_SIZE": 20}
+
+# CACHEOPS
+CACHEOPS_REDIS = "redis://localhost:6379/1"
+CACHEOPS = {"book_store.*": {"ops": "all", "timeout": 60 * 60}}
+CACHEOPS_ENABLED = True
