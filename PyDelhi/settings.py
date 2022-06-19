@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_extensions",
+    "cacheops",
     "silk",
     "rest_framework",
     "book_store",
@@ -144,5 +146,6 @@ SILKY_DYNAMIC_PROFILING = [
 
 # CACHEOPS
 CACHEOPS_REDIS = "redis://localhost:6379/1"
-CACHEOPS = {"book_store.*": {"ops": "all", "timeout": 60 * 60}}
-CACHEOPS_ENABLED = True
+CACHEOPS_ENABLED = False
+CACHEOPS_DEFAULTS = {"timeout": 60 * 60 * 24}
+CACHEOPS = {"book_store.*": {"ops": "all"}}
