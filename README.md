@@ -7,6 +7,9 @@ https://github.com/pydelhi/talks/issues/195
 # Slides
 https://docs.google.com/presentation/d/1Elhcf6SbrsF_3ZoIHr66RoFvCsOt-5t8oXYO6Bpb084/edit?usp=sharing
 
+# The Talk
+https://www.youtube.com/watch?v=hY8DA0klUHM
+
 # Tools and other reading material
 - https://github.com/jazzband/django-silk
 - https://github.com/darold/pgbadger
